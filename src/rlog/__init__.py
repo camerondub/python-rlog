@@ -1,12 +1,16 @@
+import os
 import logging
 import logging.handlers
 
 from decouple import config
 
 # file paths
-log_file = config("LOG_FILE", default="/tmp/reo.log")
-base = log_file.split(".")[0]
-err_file = ".".join([base, "err"])
+log_dir = config("LOG_DIR", default="/tmp")
+os.makedirs(log_dir, exist_ok=True)
+log_label = config("LOG_LABEL", default="reo")
+log_base = "/".join([log_dir, log_label])
+log_file = ".".join([log_base, ".log")
+err_file = ".".join([log_base, ".err")
 
 # formatter
 formatter = logging.Formatter("%(asctime)s %(levelname)s [%(filename)s.%(funcName)s]: %(message)s")
