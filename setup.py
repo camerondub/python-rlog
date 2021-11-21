@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="rlog",
-    version="21.06.2",
+    version="21.11.1",
     author="Cameron Wong",
     description="personal python logging configuration (console + rotating file log)",
     package_dir={"": "src"},
