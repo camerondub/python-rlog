@@ -36,9 +36,6 @@ logging.getLogger().addHandler(logfile_handler)
 logging.getLogger().addHandler(errfile_handler)
 logging.getLogger().setLevel(logging.DEBUG)
 
-# initial message
-logging.info("Registered logging framework")
-
 # log methods
 debug = logging.debug
 info = logging.info
