@@ -9,8 +9,8 @@ log_dir = config("LOG_DIR", default="/tmp")
 os.makedirs(log_dir, exist_ok=True)
 log_label = config("LOG_LABEL", default="reo")
 log_base = "/".join([log_dir, log_label])
-log_file = ".".join([log_base, ".log"])
-err_file = ".".join([log_base, ".err"])
+log_file = ".".join([log_base, "log"])
+err_file = ".".join([log_base, "err"])
 
 # formatter
 formatter = logging.Formatter("%(asctime)s %(levelname)s [%(filename)s.%(funcName)s]: %(message)s")
